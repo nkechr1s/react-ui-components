@@ -5,7 +5,7 @@ const Input = ({
   onChange,
   className,
   placeholder,
-  arialLabel,
+  ariaLabel,
   value,
   name,
   id,
@@ -19,7 +19,7 @@ const Input = ({
         className={className}
         onChange={onChange}
         placeholder={placeholder}
-        arial-label={arialLabel}
+        aria-label={ariaLabel}
         value={value}
         name={name}
         id={id}
