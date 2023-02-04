@@ -3,7 +3,7 @@ import Input from "./ui/Input/Input";
 const App = () => {
   return (
     <div className="App">
-      <Input type="text" arialLabel="name" placeholder="name" id="test" />
+      <Input type="text" arialLabel="name" placeholder="name" id="test" label="name" />
       <Input type="email" arialLabel="email" placeholder="email" required />
     </div>
   );

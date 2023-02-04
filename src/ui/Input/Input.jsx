@@ -9,6 +9,7 @@ const Input = ({
   value,
   name,
   id,
+  label,
   required,
 }) => {
   return (
@@ -22,6 +23,7 @@ const Input = ({
         value={value}
         name={name}
         id={id}
+        label={label}
         required={required}
       />
     </div>
