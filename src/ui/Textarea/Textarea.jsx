@@ -13,7 +13,7 @@ const Textarea = ({
   required,
 }) => {
   return (
-    <div className="relative mb-2">
+    <div className="relative mb-2 w-full">
       <textarea
         rows={rows}
         aria-invalid={ariaInvalid}

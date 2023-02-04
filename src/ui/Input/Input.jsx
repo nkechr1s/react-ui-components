@@ -12,7 +12,7 @@ const Input = ({
   required,
 }) => {
   return (
-    <div className="relative mb-2">
+    <div className="relative mb-2 w-full">
       <input
         type={type}
         className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
