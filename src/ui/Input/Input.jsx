@@ -30,8 +30,8 @@ const Input = ({
         label={label}
         min={min}
         max={max}
-        minlength={minLength}
-        maxlength={maxLength}
+        minLength={minLength}
+        maxLength={maxLength}
         required={required}
       />
       {id && (

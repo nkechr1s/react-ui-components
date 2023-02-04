@@ -1,9 +1,14 @@
-import React from "react";
+import React,{ useState }from "react";
 import Input from "./ui/Input/Input";
 import Textarea from "./ui/Textarea/Textarea";
 import Button from "./ui/Buttons/Button";
 import SecondaryButton from "./ui/Buttons/SecondaryButton";
+
 const App = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
   return (
     <div className="flex flex-col justify-center content-center flex-wrap w-[500px]  items-start mx-auto pb-16 pt-16">
       <Input
@@ -22,7 +27,7 @@ const App = () => {
         required
       />
       <Input
-        type="password"
+        type={passwordShown ? "text" : "password"}
         ariaLabel="password"
         placeHolder=" "
         id="password"
@@ -30,6 +35,7 @@ const App = () => {
         minLength="8"
         required
       />
+       <button className="bg-red-700 mb-2" onClick={togglePassword}>Show Password</button>
       <Textarea
         rows="10"
         ariaInvalid="false"
