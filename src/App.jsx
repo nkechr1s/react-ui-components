@@ -21,6 +21,15 @@ const App = () => {
         label="email"
         required
       />
+      <Input
+        type="password"
+        ariaLabel="password"
+        placeHolder=" "
+        id="password"
+        label="password"
+        minLength="8"
+        required
+      />
       <Textarea
         rows="10"
         ariaInvalid="false"
@@ -31,12 +40,8 @@ const App = () => {
         required
       />
       <div className="w-[500px]">
-        <Button 
-        text="Click me"
-        />
-        <SecondaryButton
-        text="Secondary"
-        />
+        <Button text="Click me" />
+        <SecondaryButton text="Secondary" />
       </div>
     </div>
   );
