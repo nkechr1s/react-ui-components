@@ -9,6 +9,10 @@ const Input = ({
   name,
   id,
   label,
+  min,
+  max,
+  minLength,
+  maxLength,
   required,
 }) => {
   return (
@@ -24,6 +28,10 @@ const Input = ({
         name={name}
         id={id}
         label={label}
+        min={min}
+        max={max}
+        minlength={minLength}
+        maxlength={maxLength}
         required={required}
       />
       {id && (
