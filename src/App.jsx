@@ -1,4 +1,3 @@
-import "./App.css";
 import Input from "./ui/Input/Input";
 const App = () => {
   return (
