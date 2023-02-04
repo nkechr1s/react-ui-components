@@ -13,7 +13,7 @@ const Input = ({
   required,
 }) => {
   return (
-    <div>
+   
       <input
         type={type}
         className={className}
@@ -26,7 +26,7 @@ const Input = ({
         label={label}
         required={required}
       />
-    </div>
+    
   );
 };
 
