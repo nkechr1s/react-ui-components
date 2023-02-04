@@ -4,7 +4,7 @@ const Input = ({
   type,
   onChange,
   className,
-  placeholder,
+  placeHolder,
   ariaLabel,
   value,
   name,
@@ -13,12 +13,19 @@ const Input = ({
   required,
 }) => {
   return (
-   
+    <div className="relative mb-2">
+      {id &&
+        (required ? (
+          <label htmlFor={id}>{name}*</label>
+        ) : (
+          <label htmlFor={id}>{name}</label>
+        ))}
+      {id && <br />}
       <input
         type={type}
         className={className}
         onChange={onChange}
-        placeholder={placeholder}
+        placeholder={placeHolder}
         aria-label={ariaLabel}
         value={value}
         name={name}
@@ -26,7 +33,7 @@ const Input = ({
         label={label}
         required={required}
       />
-    
+    </div>
   );
 };
 
