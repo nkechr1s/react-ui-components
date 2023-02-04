@@ -5,7 +5,7 @@ const App = () => {
       <Input
         type="text"
         ariaLabel="name"
-        placeHolder="name"
+        placeHolder=" "
         id="test"
         name="tt"
         label="name"
@@ -13,7 +13,7 @@ const App = () => {
       <Input
         type="email"
         ariaLabel="email"
-        placeHolder="email"
+        placeHolder=" "
         name="test"
         id="email"
         required
