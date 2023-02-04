@@ -1,7 +1,8 @@
 import React from "react";
 
-const Input = ({
-  type,
+const Textarea = ({
+  rows,
+  ariaInvalid,
   onChange,
   placeHolder,
   ariaLabel,
@@ -13,8 +14,9 @@ const Input = ({
 }) => {
   return (
     <div className="relative mb-2">
-      <input
-        type={type}
+      <textarea
+        rows={rows}
+        aria-invalid={ariaInvalid}
         className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
         border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer border"
         onChange={onChange}
@@ -41,4 +43,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default Textarea;
