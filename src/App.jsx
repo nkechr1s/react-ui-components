@@ -7,15 +7,14 @@ const App = () => {
         ariaLabel="name"
         placeHolder=" "
         id="test"
-        name="tt"
         label="name"
       />
       <Input
         type="email"
         ariaLabel="email"
         placeHolder=" "
-        name="test"
         id="email"
+        label="email"
         required
       />
     </div>
