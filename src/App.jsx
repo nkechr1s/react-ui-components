@@ -8,10 +8,14 @@ import { ReactComponent as EyeIconHide } from "./assets/eyeHide.svg";
 import Checkbox from "./ui/Checkbox/Checkbox";
 const App = () => {
   const [passwordShown, setPasswordShown] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
-
+  const handleOnChange = () => {
+    setIsChecked(!isChecked);
+    console.log(isChecked);
+  };
   return (
     <div className="flex flex-col justify-center content-center flex-wrap w-[900px]  items-start mx-auto pb-16 pt-16">
       <Input
@@ -51,6 +55,8 @@ const App = () => {
       <Checkbox
         className="w-4 h-4"
         label="My value"
+        checked={isChecked}
+        onChange={handleOnChange}
         href="test"
         linkTitle="Όροι χρήσης"
         required
