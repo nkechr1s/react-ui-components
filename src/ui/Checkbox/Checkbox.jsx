@@ -11,7 +11,7 @@ const Checkbox = ({
 }) => {
   return (
     <div className="relative mb-2 w-full">
-      <label className="text-black flex gap-1 items-center">
+      <label className="text-gray-400 flex gap-1 items-center">
         <input
           className={className}
           type="checkbox"
