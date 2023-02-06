@@ -8,7 +8,7 @@ import { ReactComponent as EyeIconHide } from "./assets/eyeHide.svg";
 import Checkbox from "./ui/Checkbox/Checkbox";
 const App = () => {
   const [passwordShown, setPasswordShown] = useState(false);
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
@@ -61,7 +61,7 @@ const App = () => {
         linkTitle="Όροι χρήσης"
         required
       />
-
+      <p className="text-gray-600">Above checkbox is {isChecked ? "checked" : "unchecked"}.</p>
       <Textarea
         rows="10"
         ariaInvalid="false"
