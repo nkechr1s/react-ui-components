@@ -5,7 +5,7 @@ import Button from "./ui/Buttons/Button";
 import SecondaryButton from "./ui/Buttons/SecondaryButton";
 import { ReactComponent as EyeIcon } from "./assets/eye.svg";
 import { ReactComponent as EyeIconHide } from "./assets/eyeHide.svg";
-
+import Checkbox from "./ui/Checkbox/Checkbox";
 const App = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -47,7 +47,12 @@ const App = () => {
           {passwordShown ? <EyeIcon /> : <EyeIconHide />}
         </div>
       </div>
-
+      <Checkbox
+        label="My value"
+        href="test"
+        linkTitle="Όροι χρήσης"
+        required
+      />
       <Textarea
         rows="10"
         ariaInvalid="false"
