@@ -53,7 +53,7 @@ const App = () => {
       </div>
 
       <Checkbox
-        className="w-4 h-4"
+        className="w-4 h-4 cursor-pointer"
         label="My value"
         checked={isChecked}
         onChange={handleOnChange}
