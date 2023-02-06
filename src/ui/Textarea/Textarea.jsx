@@ -1,14 +1,14 @@
 import React from "react";
 
-const Textarea = ({required, ...props }) => {
+const Textarea = ({ required, ...props }) => {
   return (
     <div className="relative mb-2 w-full">
       <textarea
-        className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
-        border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer border"
         id={props.id}
         required={required}
         {...props}
+        className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
+        border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer border"
       />
       {props.id && (
         <label
