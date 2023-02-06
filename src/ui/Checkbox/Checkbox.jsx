@@ -1,10 +1,19 @@
 import React from "react";
 
-const Checkbox = ({ label, value, onChange, href, required, linkTitle }) => {
+const Checkbox = ({
+  className,
+  label,
+  value,
+  onChange,
+  href,
+  required,
+  linkTitle,
+}) => {
   return (
     <div className="relative mb-2 w-full">
-      <label className="text-black flex gap-1">
+      <label className="text-black flex gap-1 items-center">
         <input
+          className={className}
           type="checkbox"
           checked={value}
           onChange={onChange}

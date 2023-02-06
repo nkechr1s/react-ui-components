@@ -13,7 +13,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center content-center flex-wrap w-[500px]  items-start mx-auto pb-16 pt-16">
+    <div className="flex flex-col justify-center content-center flex-wrap w-[900px]  items-start mx-auto pb-16 pt-16">
       <Input
         type="text"
         ariaLabel="name"
@@ -47,12 +47,15 @@ const App = () => {
           {passwordShown ? <EyeIcon /> : <EyeIconHide />}
         </div>
       </div>
+
       <Checkbox
+        className="w-4 h-4"
         label="My value"
         href="test"
         linkTitle="Όροι χρήσης"
         required
       />
+
       <Textarea
         rows="10"
         ariaInvalid="false"
@@ -62,7 +65,7 @@ const App = () => {
         label="email"
         required
       />
-      <div className="w-[500px]">
+      <div className="w-[900px]">
         <Button text="Click me" />
         <SecondaryButton text="Secondary" />
       </div>
