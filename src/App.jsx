@@ -14,7 +14,6 @@ const App = () => {
   };
   const handleOnChange = () => {
     setIsChecked(!isChecked);
-    console.log(isChecked);
   };
   return (
     <div className="flex flex-col justify-center content-center flex-wrap w-[900px]  items-start mx-auto pb-16 pt-16">
