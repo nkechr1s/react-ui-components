@@ -4,6 +4,8 @@ const Checkbox = ({
   className,
   label,
   value,
+  name,
+  id,
   onChange,
   href,
   required,
@@ -16,6 +18,8 @@ const Checkbox = ({
           className={className}
           type="checkbox"
           checked={value}
+          name={name}
+          id={id}
           onChange={onChange}
           required={required}
         />
