@@ -1,32 +1,14 @@
 import React from "react";
 
-const Textarea = ({
-  rows,
-  ariaInvalid,
-  onChange,
-  placeHolder,
-  ariaLabel,
-  value,
-  name,
-  id,
-  label,
-  required,
-}) => {
+const Textarea = ({ id, label, required, ...props }) => {
   return (
     <div className="relative mb-2 w-full">
       <textarea
-        rows={rows}
-        aria-invalid={ariaInvalid}
         className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
         border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer border"
-        onChange={onChange}
-        placeholder={placeHolder}
-        aria-label={ariaLabel}
-        value={value}
-        name={name}
         id={id}
-        label={label}
         required={required}
+        {...props}
       />
       {id && (
         <label

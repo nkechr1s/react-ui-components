@@ -1,38 +1,14 @@
 import React from "react";
 
-const Input = ({
-  type,
-  onChange,
-  placeHolder,
-  ariaLabel,
-  value,
-  name,
-  id,
-  label,
-  min,
-  max,
-  minLength,
-  maxLength,
-  required,
-}) => {
+const Input = ({ id, label, required, ...props }) => {
   return (
     <div className="relative mb-2 w-full">
       <input
-        type={type}
+        id={id}
+        required={required}
+        {...props}
         className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
         border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer border"
-        onChange={onChange}
-        placeholder={placeHolder}
-        aria-label={ariaLabel}
-        value={value}
-        name={name}
-        id={id}
-        label={label}
-        min={min}
-        max={max}
-        minLength={minLength}
-        maxLength={maxLength}
-        required={required}
       />
       {id && (
         <label

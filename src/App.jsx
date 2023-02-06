@@ -16,18 +16,18 @@ const App = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="flex flex-col justify-center content-center flex-wrap w-[900px]  items-start mx-auto pb-16 pt-16">
+    <form className="flex flex-col justify-center content-center flex-wrap w-[900px]  items-start mx-auto pb-16 pt-16">
       <Input
         type="text"
-        ariaLabel="name"
-        placeHolder=" "
+        aria-label="name"
+        placeholder=" "
         id="test"
         label="name"
       />
       <Input
         type="email"
-        ariaLabel="email"
-        placeHolder=" "
+        aria-label="email"
+        placeholder=" "
         id="email"
         label="email"
         required
@@ -36,8 +36,8 @@ const App = () => {
       <div className="relative w-full">
         <Input
           type={passwordShown ? "text" : "password"}
-          ariaLabel="password"
-          placeHolder=" "
+          arial-abel="password"
+          placeholder=" "
           id="password"
           label="password"
           minLength="8"
@@ -60,21 +60,23 @@ const App = () => {
         linkTitle="Όροι χρήσης"
         required
       />
-      <p className="text-gray-600">Above checkbox is {isChecked ? "checked" : "unchecked"}.</p>
+      <p className="text-gray-600">
+        Above checkbox is {isChecked ? "checked" : "unchecked"}.
+      </p>
       <Textarea
         rows="10"
-        ariaInvalid="false"
-        ariaLabel="email"
-        placeHolder=" "
+        ariainvalid="false"
+        arialabel="email"
+        placeholder=" "
         id="email"
         label="email"
         required
       />
+      <Button text="Click me" />
       <div className="w-[900px]">
-        <Button text="Click me" />
         <SecondaryButton text="Secondary" />
       </div>
-    </div>
+    </form>
   );
 };
 
