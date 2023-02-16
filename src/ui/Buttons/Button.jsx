@@ -6,15 +6,14 @@ const Button = ({ buttonType, text, onClick, href, ...props }) => {
     text-sky-500 font-normal transition ease-in-out hover:bg-sky-500 hover:text-white mb-2`,
   };
 
-  return (
-    <button
-      {...props}
-      onClick={onClick}
-      className={buttonClassNames?.[buttonType] ?? buttonClassNames.primary}
-    >
-      {text}
-    </button>
-  );
+  const ButtonComponent = href ? "a" : "button";
+  const buttonProps = {
+    ...(href ? { href } : { onClick }),
+    ...props,
+    className: buttonClassNames?.[buttonType] ?? buttonClassNames.primary,
+  };
+
+  return <ButtonComponent {...buttonProps}>{text}</ButtonComponent>;
 };
 
 export default Button;
