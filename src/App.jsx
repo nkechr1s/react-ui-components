@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import Input from "./ui/Input/Input";
 import Textarea from "./ui/Textarea/Textarea";
 import Button from "./ui/Buttons/Button";
-import SecondaryButton from "./ui/Buttons/SecondaryButton";
 import { ReactComponent as EyeIcon } from "./assets/eye.svg";
 import { ReactComponent as EyeIconHide } from "./assets/eyeHide.svg";
 import Checkbox from "./ui/Checkbox/Checkbox";
 const App = () => {
-  const [passwordShown, setPasswordShown] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
+  const [passwordShown, setPasswordShown] = useState();
+  const [isChecked, setIsChecked] = useState();
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
@@ -73,9 +72,7 @@ const App = () => {
         required
       />
       <Button text="Click me" />
-      <div className="w-[900px]">
-        <SecondaryButton text="Secondary" />
-      </div>
+  
     </form>
   );
 };
