@@ -5,7 +5,7 @@ import Button from "./ui/Buttons/Button";
 import { ReactComponent as EyeIcon } from "./assets/eye.svg";
 import { ReactComponent as EyeIconHide } from "./assets/eyeHide.svg";
 import Checkbox from "./ui/Checkbox/Checkbox";
-import Grid from "../Grid";
+import Grid from "./Grid";
 const App = () => {
   const [passwordShown, setPasswordShown] = useState();
   const [isChecked, setIsChecked] = useState();

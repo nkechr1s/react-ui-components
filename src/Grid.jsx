@@ -16,11 +16,11 @@ function Grid() {
   }, []);
 
   return (
-    <div className="grid grid-cols-5 gap-1 sm:grid-cols-1 sm:grid-flow-row sm:auto-rows-max">
+    <div className="md:grid md:grid-cols-5 md:gap-1 sm:grid-cols-1 sm:grid-flow-row sm:auto-rows-max">
       {blogs.length > 0 && (
         <div className="col-span-1 bg-red-300">{blogs[0].title}</div>
       )}
-      <div className="col-span-4 grid grid-cols-2 gap-1 sm:grid-cols-4 sm:grid-flow-column">
+      <div className="col-span-4 md:grid md:grid-cols-2 gap-1 sm:grid-cols-4 sm:grid-flow-column">
         {blogs.slice(1, 5).map((item, index) => (
           <div
             key={index}
