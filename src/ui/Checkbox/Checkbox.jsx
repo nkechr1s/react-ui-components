@@ -1,5 +1,3 @@
-import React from "react";
-
 const Checkbox = ({ linkTitle, required, label, href, onChange, ...props }) => {
   return (
     <div className="relative mb-2 w-full">
