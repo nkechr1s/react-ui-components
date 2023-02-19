@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'blog-image': "url('./assets/image.webp')",
+      }
+    },
   },
   plugins: [],
 }
