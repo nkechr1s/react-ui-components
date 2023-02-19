@@ -26,10 +26,10 @@ const Grid = () => {
           target="_blank"
           rel="nofollow"
           href={blogs[0].link}
-          className="md:flex w-full bg-cover md:h-[410px] md:mr-[10px] md:max-w-[470px] rounded-md"
-          style={{ backgroundImage: `url(${blogs[0].image})` }}
+          className="md:flex w-full bg-cover md:h-[410px] md:mr-[10px] md:max-w-[470px] rounded-md shadow-inner"
+          style={{ backgroundImage: `url(${blogs[0].image})`}}
         >
-          <div className="flex flex-col px-2 pt-2">
+          <div className="flex flex-col px-2 pt-2 gap-1">
             <p className="bg-blue-800 w-fit text-[12px] px-[4px] rounded text-white">
               {blogs[0].tags}
             </p>
@@ -46,12 +46,12 @@ const Grid = () => {
             rel="nofollow"
             href={item.link}
             key={index}
-            className={` bg-cover h-[200px] md:w-[400px] rounded-md ${
+            className={` bg-cover h-[200px] md:w-[400px] rounded-md shadow-inner ${
               index < 2 ? "row-1" : "row-2"
             }`}
             style={{ backgroundImage: `url(${item.image})` }}
           >
-            <div className="flex flex-col px-2 pt-2">
+            <div className="flex flex-col px-2 pt-2 gap-1">
               <p className="bg-blue-800 w-fit text-[12px] px-[4px] rounded text-white">
                 {item.tags}
               </p>
