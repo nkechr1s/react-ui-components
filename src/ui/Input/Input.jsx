@@ -1,5 +1,3 @@
-import React from "react";
-
 const Input = ({ id, label, required, ...props }) => {
   return (
     <div className="relative mb-2 w-full">

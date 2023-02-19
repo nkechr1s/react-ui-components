@@ -1,5 +1,3 @@
-import React from "react";
-
 const Textarea = ({ id, label, required, ...props }) => {
   return (
     <div className="relative mb-2 w-full">
