@@ -6,9 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'blog-image': "url('./assets/image.webp')",
-      }
+      backgroundImage: {}
     },
   },
   plugins: [],
