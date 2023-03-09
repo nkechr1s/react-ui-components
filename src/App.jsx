@@ -4,66 +4,45 @@ import Button from "./ui/Buttons/Button";
 
 const App = () => {
   const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState(false);
-  const [emailErrorMessage, setEmailErrorMessage] = useState("");
-
+  const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState(false);
+  
+  const [passwordError, setPasswordError] = useState("");
+  const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [passwordErrorMessage, setPasswordErrorMessage] = useState("");
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!email) {
-      setEmailError(true);
-      setEmailErrorMessage("Please enter an email");
-    } else if (!/\S+@\S+\.\S{2,}/.test(email)) {
-      setEmailError(true);
-      setEmailErrorMessage("Please enter a valid email address");
-    } else {
-      const domain = email.split("@")[1];
-      const domainSegments = domain.split(".");
-      if (domainSegments[domainSegments.length - 1].length < 2) {
-        setEmailError(true);
-        setEmailErrorMessage("Please enter a valid email address");
-      } else {
-        setEmailError(false);
-        setEmailErrorMessage("");
-      }
-    }
-
-    if (!password) {
-      setPasswordError(true);
-      setPasswordErrorMessage("Please enter a password");
-    } else if (password.length < 8) {
-      setPasswordError(true);
-      setPasswordErrorMessage("Password must be at least 8 characters long");
-    } else if (!/\d/.test(password)) {
-      setPasswordError(true);
-      setPasswordErrorMessage("Password must contain at least 1 number");
-    } else if (!/[A-Z]/.test(password)) {
-      setPasswordError(true);
-      setPasswordErrorMessage(
-        "Password must contain at least 1 uppercase letter"
-      );
-    } else {
-      setPasswordError(false);
-      setPasswordErrorMessage("");
-    }
-
+  
+    const emailError =
+      !email || !/\S+@\S+\.\S{2,}/.test(email) || email.split("@")[1].split(".").pop().length < 2;
+    setEmailError(emailError);
+    setEmailErrorMessage(emailError ? "Please enter a valid email address" : "");
+  
+    const passwordError =
+      !password || password.length < 8 || !/\d/.test(password) || !/[A-Z]/.test(password);
+    setPasswordError(passwordError);
+    setPasswordErrorMessage(
+      passwordError
+        ? "Password must be at least 8 characters long and contain at least 1 number and 1 uppercase letter"
+        : ""
+    );
+  
     if (!emailError && !passwordError) {
-      // handle form submission
+      console.log('logged in!');
     }
   };
-
+  
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    setEmailError(false); // reset error state when user types in input
+    setEmailError(false);
+    setEmailErrorMessage("");
   };
-
+  
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    setPasswordError(false); // reset error state when user types in input
+    setPasswordError(false);
+    setPasswordErrorMessage("");
   };
 
   return (
