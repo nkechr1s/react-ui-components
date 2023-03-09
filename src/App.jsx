@@ -81,6 +81,7 @@ const App = () => {
         onChange={handleEmailChange}
         error={emailError}
         isRequired
+        autoComplete="email"
         errorMessage={emailErrorMessage}
       />
 
@@ -94,6 +95,7 @@ const App = () => {
         onChange={handlePasswordChange}
         error={passwordError}
         isRequired
+        autoComplete="current-password"
         errorMessage={passwordErrorMessage}
       />
 
