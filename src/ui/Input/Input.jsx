@@ -1,7 +1,6 @@
 const Input = ({
   id,
   label,
-  required,
   error,
   errorMessage,
   isRequired,
@@ -15,7 +14,7 @@ const Input = ({
       <div className="relative mb-2 w-full">
         <input
           id={id}
-          required={required}
+          isRequired={isRequired}
           {...props}
           className={`block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
         ${
