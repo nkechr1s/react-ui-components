@@ -25,23 +25,22 @@ const App = () => {
       setEmailErrorMessage("");
     }
 
-    if (!password) {
-      setPasswordError(true);
-      setPasswordErrorMessage("Please enter a password");
-    } else if (password.length < 8) {
-      setPasswordError(true);
-      setPasswordErrorMessage("Password must be at least 8 characters long");
-    } else if (!/\d/.test(password)) {
-      setPasswordError(true);
-      setPasswordErrorMessage("Password must contain at least 1 number");
-    } else if (!/[A-Z]/.test(password)) {
-      setPasswordError(true);
-      setPasswordErrorMessage(
-        "Password must contain at least 1 uppercase letter"
-      );
+    if (!email) {
+      setEmailError(true);
+      setEmailErrorMessage("Please enter an email");
+    } else if (!/\S+@\S+\.\S{2,}/.test(email)) {
+      setEmailError(true);
+      setEmailErrorMessage("Please enter a valid email address");
     } else {
-      setPasswordError(false);
-      setPasswordErrorMessage("");
+      const domain = email.split("@")[1];
+      const domainSegments = domain.split(".");
+      if (domainSegments[domainSegments.length - 1].length < 2) {
+        setEmailError(true);
+        setEmailErrorMessage("Please enter a valid email address");
+      } else {
+        setEmailError(false);
+        setEmailErrorMessage("");
+      }
     }
 
     if (!emailError && !passwordError) {
