@@ -1,11 +1,4 @@
-const Input = ({
-  id,
-  label,
-  error,
-  errorMessage,
-  isRequired,
-  ...props
-}) => {
+const Input = ({ id, label, error, errorMessage, isRequired, ...props }) => {
   return (
     <>
       {error && (
@@ -14,7 +7,6 @@ const Input = ({
       <div className="relative mb-2 w-full">
         <input
           id={id}
-          isRequired={isRequired}
           {...props}
           className={`block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1
         ${
