@@ -5,10 +5,10 @@ import Button from "./ui/Buttons/Button";
 const App = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [password, setPassword] = useState("");
-  
-  const [passwordError, setPasswordError] = useState("");
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
+  
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const [passwordErrorMessage, setPasswordErrorMessage] = useState("");
   
   const handleSubmit = (e) => {
